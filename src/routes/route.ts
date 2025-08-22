@@ -1,11 +1,9 @@
 import { Router } from "express";
-import { tesajah } from "../controller/tes";
+import { handlingFromFlask } from "../controller/handlingFromFlask";
 
 const router = Router();
 
-router.route('/tes').get(tesajah);
+router.route('/tes').post(handlingFromFlask);
 
-router.route('').get((req, res) => {
-  res.send('Hello, API!');
-});
+
 export default router;
